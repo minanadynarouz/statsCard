@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    font-family: var(--fontFamilyLexend);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --vDarkBlue: hsl(233, 47%, 7%);
+    --sDarkBluee: hsl(244, 38%, 16%);
+    --violet: hsl(277, 64%, 61%);
+    --slightTransWhite_main: hsla(0, 0%, 100%, 0.75);
+    --slightTransWhile_heading: hsla(0, 0%, 100%, 0.6);
+    --fontFamilyInter: 'Inter', sans-serif;
+    --fontFamilyLexend: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: var(--vDarkBlue);
+    margin: 0;
+
+    /* Reset default margin */
+    padding: 8% 15% 0% 13%;
+
+}
+
+
+h1 {
+    color: white;
+    font-family: var(--fontFamilyLexend);
+    padding: 2rem 2rem 0 4rem;
+}
+
+span {
+    color: var(--violet);
+}
+
+p {
+    color: var(--slightTransWhite_main);
+    font-family: var(--fontFamilyInter);
+    padding: 2rem 2rem 0 4rem;
+    line-height: 30px;
+}
+
+main.card {
+    background-color: var(--sDarkBluee);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-radius: 1%;
+    width: 90%;
+    order: initial;
+}
+
+.card-content>p {
+    padding: 0 2rem 0 4rem;
+}
+
+.analysis {
+    display: flex;
+
+}
+
+.analysis_item {
+
+    width: 30px;
+}
+
+h1.analysis_item {
+    font-size: 2rem;
+    height: 1px;
+    margin-bottom: -6px
+}
+
+p.analysis_item {
+    padding-bottom: 35px;
+    font-size: 0.7rem;
+
+}
+
+.card-content {
+    width: 50%;
+    position: relative;
+    /* Ensure the .card-content is positioned relative */
+}
+
+.card-content img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 1%;
+    border-bottom-right-radius: 1%;
+    z-index: 1;
+    /* Ensure the image is positioned behind .opac_color */
+}
+
+.opac_color {
+    position: absolute;
+    /* Position .opac_color absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(182, 182, 247, 0.374);
+    border-top-right-radius: 1%;
+    border-bottom-right-radius: 1%;
+    z-index: 2;
+    /* Ensure .opac_color is positioned on top of the image */
+}
+
+@media (max-width: 600px) {
+
+    main.card {
+        flex-direction: column-reverse;
+    }
+
+    .card-content>p,
+    .card-content>h1 {
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .card-content>h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-content {
+        width: 100%;
+        position: relative;
+
+    }
+
+    .card-content img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 1%;
+        border-top-left-radius: 1%;
+        z-index: 1;
+        /* Ensure the image is positioned behind .opac_color */
+    }
+
+    .opac_color {
+        position: absolute;
+        /* Position .opac_color absolutely */
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(182, 182, 247, 0.374);
+        border-top-right-radius: 1%;
+        border-top-left-radius: 1%;
+        z-index: 2;
+        /* Ensure .opac_color is positioned on top of the image */
+    }
+
+
+
+    .analysis {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .analysis_item {
+        padding: 0;
+        margin-left: 25vw;
+    }
+
+    .analysis_box>p {
+        padding-top: 30px;
+
+    }
+
+
+}
